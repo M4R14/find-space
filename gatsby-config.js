@@ -13,6 +13,29 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: `MangasJson`, // a fixed string
+        path: `./src/mangas/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `json_manga`,
+        path: `${__dirname}/src/mangas/`,
+        ignore: [`**/\.jpg`], // ignore files starting with a dot
+      },
+    },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        name:`mangas`,
+        ignore: [`**/\.json`], // ignore files starting with a dot
+        path: `${__dirname}/src/mangas`,
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

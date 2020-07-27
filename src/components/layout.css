@@ -620,3 +620,27 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.page-list {
+  display: grid;
+  /* grid-template-columns: auto; */
+  grid-gap: 0.5em;
+}
+
+.manga-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.5em;
+  padding: 3rem 0;
+}
+
+.manga-item {
+  background-color: whitesmoke;
+  border: solid 1px hsla(0, 0%, 0%, 0.04);
+}
+
+.manga-item > :nth-child(2) {
+  padding: 0.5em;
+  font-size: initial;
+  line-height: normal;
+}
